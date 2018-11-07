@@ -19,22 +19,9 @@
             "name": "worker",
             "image": "mic3ael/multi-worker",
             "hostname": "worker",
-            "essential": false,
-            "memory": 128
-        },
-        {
-            "name": "nginx",
-            "image": "mic3ael/multi-nginx",
-            "hostname": "nginx",
             "essential": true,
-            "portMappings": [
-                {
-                    "hostPort": 80,
-                    "containerPort": 80
-                }
-            ],
-            "links": ["client", "server"],
             "memory": 128
         }
+        
     ]
 }
